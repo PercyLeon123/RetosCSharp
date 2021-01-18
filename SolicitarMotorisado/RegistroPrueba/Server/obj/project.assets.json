@@ -880,11 +880,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Server\\RegistroPrueba.Server.csproj",
+      "projectUniqueName": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Server\\RegistroPrueba.Server.csproj",
       "projectName": "RegistroPrueba.Server",
-      "projectPath": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Server\\RegistroPrueba.Server.csproj",
+      "projectPath": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Server\\RegistroPrueba.Server.csproj",
       "packagesPath": "C:\\Users\\pleon\\.nuget\\packages\\",
-      "outputPath": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Server\\obj\\",
+      "outputPath": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -905,11 +905,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Client\\RegistroPrueba.Client.csproj": {
-              "projectPath": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Client\\RegistroPrueba.Client.csproj"
+            "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Client\\RegistroPrueba.Client.csproj": {
+              "projectPath": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Client\\RegistroPrueba.Client.csproj"
             },
-            "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj": {
-              "projectPath": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj"
+            "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj": {
+              "projectPath": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj"
             }
           }
         }

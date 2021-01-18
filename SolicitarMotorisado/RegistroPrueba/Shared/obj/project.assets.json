@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj",
+      "projectUniqueName": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj",
       "projectName": "RegistroPrueba.Shared",
-      "projectPath": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj",
+      "projectPath": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj",
       "packagesPath": "C:\\Users\\pleon\\.nuget\\packages\\",
-      "outputPath": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Shared\\obj\\",
+      "outputPath": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

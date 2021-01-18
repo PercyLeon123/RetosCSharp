@@ -1176,11 +1176,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Client\\RegistroPrueba.Client.csproj",
+      "projectUniqueName": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Client\\RegistroPrueba.Client.csproj",
       "projectName": "RegistroPrueba.Client",
-      "projectPath": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Client\\RegistroPrueba.Client.csproj",
+      "projectPath": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Client\\RegistroPrueba.Client.csproj",
       "packagesPath": "C:\\Users\\pleon\\.nuget\\packages\\",
-      "outputPath": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Client\\obj\\",
+      "outputPath": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -1201,8 +1201,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj": {
-              "projectPath": "C:\\Aplicaciones\\BORRAR\\RegistroPrueba\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj"
+            "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj": {
+              "projectPath": "C:\\Aplicaciones\\BORRAR\\Retos\\SolicitarMotorisado\\RegistroPrueba\\Shared\\RegistroPrueba.Shared.csproj"
             }
           }
         }

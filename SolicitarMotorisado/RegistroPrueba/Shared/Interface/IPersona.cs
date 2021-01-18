@@ -8,7 +8,7 @@ namespace RegistroPrueba.Shared.Interface
 {
     public interface IPersona
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string Nombre { get; set; }
     }
 }

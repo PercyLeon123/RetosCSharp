@@ -10,3 +10,15 @@ C:\Aplicaciones\BORRAR\RegistroPrueba\RegistroPrueba\Shared\obj\Debug\net5.0\Reg
 C:\Aplicaciones\BORRAR\RegistroPrueba\RegistroPrueba\Shared\obj\Debug\net5.0\RegistroPrueba.Shared.dll
 C:\Aplicaciones\BORRAR\RegistroPrueba\RegistroPrueba\Shared\obj\Debug\net5.0\ref\RegistroPrueba.Shared.dll
 C:\Aplicaciones\BORRAR\RegistroPrueba\RegistroPrueba\Shared\obj\Debug\net5.0\RegistroPrueba.Shared.pdb
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\obj\Debug\net5.0\RegistroPrueba.Shared.csprojAssemblyReference.cache
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\obj\Debug\net5.0\RegistroPrueba.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\obj\Debug\net5.0\RegistroPrueba.Shared.AssemblyInfoInputs.cache
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\obj\Debug\net5.0\RegistroPrueba.Shared.AssemblyInfo.cs
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\obj\Debug\net5.0\RegistroPrueba.Shared.csproj.CoreCompileInputs.cache
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\obj\Debug\net5.0\RegistroPrueba.Shared.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\obj\Debug\net5.0\ref\RegistroPrueba.Shared.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\obj\Debug\net5.0\RegistroPrueba.Shared.pdb
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\bin\Debug\net5.0\RegistroPrueba.Shared.deps.json
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\bin\Debug\net5.0\RegistroPrueba.Shared.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\bin\Debug\net5.0\ref\RegistroPrueba.Shared.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Shared\bin\Debug\net5.0\RegistroPrueba.Shared.pdb
