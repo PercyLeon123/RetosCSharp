@@ -118,3 +118,11 @@ C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\obj\Debug
 C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\obj\Debug\net5.0\RegistroPrueba.Server.Views.pdb
 C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\obj\Debug\net5.0\RegistroPrueba.Server.csproj.CopyComplete
 C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\obj\Debug\net5.0\RegistroPrueba.Server.genruntimeconfig.cache
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Server\bin\Debug\net5.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll

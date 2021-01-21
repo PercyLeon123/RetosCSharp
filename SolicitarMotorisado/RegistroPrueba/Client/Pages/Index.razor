@@ -1,7 +1,218 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<div class=" container">
+    <div class="mb-5">
+        <div class="tabs is-toggle is-toggle-rounded">
+            <ul class="mx-0">
+                <li class="is-active">
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-image"></i></span>
+                        <span>Pictures</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-music"></i></span>
+                        <span>Music</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span class="icon is-small"><i class="fas fa-users"></i></span>
+                        <span>Usuarios en Linea</span>
+                    </a>
+                </li>
+                <li>
+                    <a @onclick="(()=>CModal.EventoModal())">
+                        <span class="icon is-small"><i class="fas fa-user"></i></span>
+                        <span>Login</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-Welcome to your new app.
+    <div class="columns is-narrow-touch">
+        <div class="column">
+            <div class="columns is-flex-wrap-wrap is-tablet">
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+                <div class="column is-4-desktop is-6">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 mx-0">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48 mx-0">
+                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                    <p class="subtitle is-6">johnsmith</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris. <a>bulmaio</a>.
+                                <a href="#">#css</a> <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                            <div class="content pt-0">
+                                <button class="button is-info is-hovered">Hover</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 mx-0">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48 mx-0">
+                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                    <p class="subtitle is-6">johnsmith</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris. <a>bulmaio</a>.
+                                <a href="#">#css</a> <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                            <div class="content pt-0">
+                                <button class="button is-info is-hovered">Hover</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 mx-0">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48 mx-0">
+                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                    <p class="subtitle is-6">johnsmith</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris. <a>bulmaio</a>.
+                                <a href="#">#css</a> <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                            <div class="content pt-0">
+                                <button class="button is-info is-hovered">Hover</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3 mx-0">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48 mx-0">
+                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">John Smith</p>
+                                    <p class="subtitle is-6">johnsmith</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris. <a>bulmaio</a>.
+                                <a href="#">#css</a> <a href="#">#responsive</a>
+                                <br>
+                                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            </div>
+                            <div class="content pt-0">
+                                <button class="button is-info is-hovered">Hover</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <Modal @ref="CModal">
+        <Formulario>
+            <div class="has-background-white px-4 pt-3">
+                <EditForm Model="Cliente" OnValidSubmit="(()=>Login(true))">
+                    <DataAnnotationsValidator />
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right mb-1">
+                            <InputText class="input"  placeholder="Usuario" @bind-Value="Cliente.Nombre" />
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span class="icon is-small is-right">
+                                <i class="fas fa-check"></i>
+                            </span>
+                        </p>
+
+                        <ValidationMessage For="(()=>Cliente.Nombre)" />
+                        
+                    </div>
+
+                    <section class="modal-card-body">
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button type="submit" class="button is-success">Save changes</button>
+                        <button class="button">Cancel</button>
+                    </footer>
+                </EditForm>
+  
+                @*<div class="field">
+                    <p class="control">
+                        <button class="button is-success">
+                            Login
+                        </button>
+                    </p>
+                </div>*@
+            </div>
+        </Formulario>
+    </Modal>
+</div>
+

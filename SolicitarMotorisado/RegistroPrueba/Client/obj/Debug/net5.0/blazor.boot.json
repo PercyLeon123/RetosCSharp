@@ -12,7 +12,15 @@
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-D1w9d3k8\/YsRHjUWE8r0mcincGLiFMnCKofplsO+ND8=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-RRf4AB0dV9\/i2UOUzqv9Y6\/lhmXbmGu69KdV9IKl3Sg=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-e1qZjweGQyiTJvKcu\/qrqk94ybJ9x0f4iQ4NvNemgxs=",
+      "Microsoft.AspNetCore.Connections.Abstractions.dll": "sha256-GSuKA1XY+w4juzblHUWYro4NaWCi346g\/zGH904QtYU=",
+      "Microsoft.AspNetCore.Http.Connections.Client.dll": "sha256-UcY4ZqCagIsP3hkL2ZgoLu1ke+1poFdaFa9hTBgq4Co=",
+      "Microsoft.AspNetCore.Http.Connections.Common.dll": "sha256-dctuutWV\/nXj3Z6ig7sBmpJSpr34JVv2cvDYoz0hJ30=",
+      "Microsoft.AspNetCore.Http.Features.dll": "sha256-o5Wz\/tqemKqG\/5LQwlMx1z8AZErFnserZ\/sxz6+ZXfU=",
       "Microsoft.AspNetCore.Metadata.dll": "sha256-07Nes4qtyvtCCTr1qv4J5MweJd0ZsW+AeK3V7tfsv0k=",
+      "Microsoft.AspNetCore.SignalR.Client.dll": "sha256-nQiqNfQUjUTJNaWroGtnpN1aIyTDN8YIAz+E4r56BK8=",
+      "Microsoft.AspNetCore.SignalR.Client.Core.dll": "sha256-3otuwz8mqyaiinlxRGOfiX3cag5I8fMYDJsPDgb7SNI=",
+      "Microsoft.AspNetCore.SignalR.Common.dll": "sha256-JTr7B+bKlfQVdEEw0P0GgXm5rLByrFdWxZAUkEC0cY8=",
+      "Microsoft.AspNetCore.SignalR.Protocols.Json.dll": "sha256-7gQkh+Y61RJS5wTESITjLHswUFbCXiX6GPdubFx7Hv8=",
       "Microsoft.Extensions.Configuration.dll": "sha256-x9zYR1t1is\/fStNpBiQnXyPdMpLLcQcra3w4RXGSg4o=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-NYecKM0ZpUvzj4spvgi6xUu80rkx8PX7fiRok\/BNaHw=",
       "Microsoft.Extensions.Configuration.Binder.dll": "sha256-JFLIykah3r5WjvztBuVIaMM9wfVswDM+On6k\/QVgeeg=",
@@ -195,13 +203,13 @@
       "mscorlib.dll": "sha256-FWPx51huC\/WJLkKCgoTEa5pzm8+4Aucxg0YuOiuOwkQ=",
       "netstandard.dll": "sha256-2ba2qAAtNUX9Qh5PFXhTMtcD\/Nra\/wyG197\/wrnxElI=",
       "System.Private.CoreLib.dll": "sha256-4wsl1v32v74UB0CTQ6+AdUTdM+9C1VraomgeCjb4Wug=",
-      "RegistroPrueba.Shared.dll": "sha256-kSGVXXeOcOrIsdPwx+WK4HQwS6PnbWmCEIJghi2j7Yg=",
-      "RegistroPrueba.Client.dll": "sha256-k1FgDb\/ay4DQnKgKDli095d5VMkaa0LHLjDXeiMNfuU="
+      "RegistroPrueba.Shared.dll": "sha256-trno+OmJ8QBkLt2\/QDikgscYaZlzlRyZXiyw9DYs\/Gs=",
+      "RegistroPrueba.Client.dll": "sha256-W7DD3ekyK2lWtodk8ll1zjbAWU1aolg6F5VKIdZD2YQ="
     },
     "lazyAssembly": null,
     "pdb": {
-      "RegistroPrueba.Shared.pdb": "sha256-b8LBM5bYiSAxmrQ3J9Tn0Q3IGdry2JqXRmpf+iYhexc=",
-      "RegistroPrueba.Client.pdb": "sha256-YxJRu5v8ujoP9fWc6xG5f88nR9Su4rtk11TnIhB5jso="
+      "RegistroPrueba.Shared.pdb": "sha256-svaLf03xNqq7ZSWFRaLPy\/tpb3S7TGI8DSeHy0y44Kc=",
+      "RegistroPrueba.Client.pdb": "sha256-ahRrmp9SssrPY9Skz3k5bu7bbhmtiFgGdmgKSTdAvGY="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-nXByiCO4+RYyh+A88TSSZDwAJMF7M7Up\/h6dfAA19C8=",

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroPrueba.Server", "RegistroPrueba\Server\RegistroPrueba.Server.csproj", "{EF774008-500E-42DD-BE60-80EC0F1937BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroPrueba.Server", "RegistroPrueba\Server\RegistroPrueba.Server.csproj", "{EF774008-500E-42DD-BE60-80EC0F1937BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroPrueba.Client", "RegistroPrueba\Client\RegistroPrueba.Client.csproj", "{9B29238C-79B9-4947-86A7-93E6BFD0BFEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroPrueba.Client", "RegistroPrueba\Client\RegistroPrueba.Client.csproj", "{9B29238C-79B9-4947-86A7-93E6BFD0BFEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroPrueba.Shared", "RegistroPrueba\Shared\RegistroPrueba.Shared.csproj", "{2CAAD5C3-289A-4C5C-86F5-3AF4E34BECFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegistroPrueba.Shared", "RegistroPrueba\Shared\RegistroPrueba.Shared.csproj", "{2CAAD5C3-289A-4C5C-86F5-3AF4E34BECFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
