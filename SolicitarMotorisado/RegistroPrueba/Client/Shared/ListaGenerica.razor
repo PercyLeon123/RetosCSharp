@@ -1,0 +1,17 @@
+﻿@typeparam TObject
+
+@if (ListObject == null)
+{
+    <div>Cargando . . .</div>
+}
+else if (ListObject.Count == 0)
+{
+    <div>Sin registros</div>
+}
+else
+{
+    foreach (var _object in ListObject) 
+    {
+        @Registro(_object);
+    }
+}

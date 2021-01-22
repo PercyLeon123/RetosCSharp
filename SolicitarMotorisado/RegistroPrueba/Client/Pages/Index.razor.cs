@@ -17,13 +17,14 @@ namespace RegistroPrueba.Client.Pages
         protected Modal CModal; /* Componente Modal instanciado */
 
         protected List<Cliente> ListaCliente = new();
+        protected List<Horario> ListaHorario = new();
         protected Cliente Cliente = new();
 
         protected override async Task OnInitializedAsync()
         {
             /* HubConnectionBuilder es un constructor para configurar instancias de HubConnection  */
             HubConection = new HubConnectionBuilder()
-                .WithUrl(NavigationManager.ToAbsoluteUri("/"))
+                .WithUrl(NavigationManager.ToAbsoluteUri("/serviceHub"))
                 .Build();
 
             /* Metodo invocable por el servidor */
@@ -33,7 +34,14 @@ namespace RegistroPrueba.Client.Pages
                 StateHasChanged();
             });
 
+            HubConection.On<List<Horario>>("ListarHorario", (listaHorario) =>
+             {
+                 ListaHorario = listaHorario;
+                 StateHasChanged();
+             });
         }
+
+        public bool IsConnected => HubConection.State == HubConnectionState.Connected;
 
         /* Consumir metodo del servidor */
         protected async Task SendLogin()
@@ -45,6 +53,7 @@ namespace RegistroPrueba.Client.Pages
         protected async Task Login(bool? isAuthenticated)
         {
             await SendLogin();
+            CModal.EventoModal();
         }
     }
 }

@@ -8,6 +8,6 @@ namespace RegistroPrueba.Shared
 {
     public class Empleado : Persona
     {
-        public bool Disposicion { get; set; }
+        public bool Disponible { get; set; }
     }
 }
