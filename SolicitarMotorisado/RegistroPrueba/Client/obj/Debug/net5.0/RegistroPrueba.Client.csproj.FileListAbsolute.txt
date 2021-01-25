@@ -1298,3 +1298,7 @@ C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Client\obj\Debug
 C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Client\obj\Debug\net5.0\RegistroPrueba.Client.dll
 C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Client\obj\Debug\net5.0\ref\RegistroPrueba.Client.dll
 C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Client\obj\Debug\net5.0\RegistroPrueba.Client.pdb
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Client\obj\Debug\net5.0\RazorDeclaration\Shared\UserChatItem.razor.g.cs
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Client\obj\Debug\net5.0\Razor\Shared\UserChatItem.razor.g.cs
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Client\obj\Debug\net5.0\RazorDeclaration\Shared\Chat.razor.g.cs
+C:\Aplicaciones\BORRAR\Retos\SolicitarMotorisado\RegistroPrueba\Client\obj\Debug\net5.0\Razor\Shared\Chat.razor.g.cs

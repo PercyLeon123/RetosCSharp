@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace RegistroPrueba.Shared
 {
-    public class Cliente : Persona
+    public class MessageUser : Persona
     {
-        public string DireccionDomicilio { get; set; }
-        public List<string> Mensajes { get; set; }
+        public string Mesanje { get; set; }
     }
 }

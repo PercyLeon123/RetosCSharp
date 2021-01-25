@@ -14,13 +14,15 @@ namespace RegistroPrueba.Client.Pages
         [Inject] protected NavigationManager NavigationManager { get; set; }
 
         protected HubConnection HubConection; /* Guardara la conexión que se utiliza para invocar métodos en un servidor SignalR. */
-        protected Modal CModal; /* Componente Modal instanciado */
+        protected Modal CModalLogin; /* Componente Modal instanciado */
+        protected Modal CModalListUsers;
 
         protected List<Cliente> ListaCliente = new();
         protected List<Horario> ListaHorario = new();
+        protected List<UserMessages> ListaMensajeUsuarios = new();
         protected Cliente Cliente = new();
 
-        protected override async Task OnInitializedAsync()
+        protected override void OnInitialized()
         {
             /* HubConnectionBuilder es un constructor para configurar instancias de HubConnection  */
             HubConection = new HubConnectionBuilder()
@@ -35,10 +37,15 @@ namespace RegistroPrueba.Client.Pages
             });
 
             HubConection.On<List<Horario>>("ListarHorario", (listaHorario) =>
-             {
+            {
                  ListaHorario = listaHorario;
                  StateHasChanged();
-             });
+            });
+
+            HubConection.On<MessageUser>("MensajePrivado", (messageUser) =>
+            {
+                ListaMensajeUsuarios.FirstOrDefault(x => x.Id == messageUser.Id).Mesanjes.Add(messageUser.Mesanje);
+            });
         }
 
         public bool IsConnected => HubConection.State == HubConnectionState.Connected;
@@ -53,7 +60,18 @@ namespace RegistroPrueba.Client.Pages
         protected async Task Login(bool? isAuthenticated)
         {
             await SendLogin();
-            CModal.EventoModal();
+            CModalLogin.EventoModal();
+        }
+
+        protected void ComenzarChat(UserMessages userMessage) 
+        {
+            ListaMensajeUsuarios.Add(userMessage);
+            StateHasChanged();
+        }
+
+        protected async Task MensajePrivado(MessageUser messageUser) 
+        {
+            await HubConection.SendAsync("MensajePrivado", messageUser);
         }
     }
 }

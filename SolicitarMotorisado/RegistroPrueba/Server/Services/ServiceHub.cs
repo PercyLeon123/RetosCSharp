@@ -23,8 +23,8 @@ namespace RegistroPrueba.Server.Services
             cliente.Id = Context.ConnectionId;
             Clientes.ListaCliente.Add(cliente); /* Agregamos al nuevo usuario a la lista global de usuarios */
 
-            await Clients.Client(Context.ConnectionId).SendAsync("ListarUsuario", Clientes.ListaCliente);
             await Clients.Client(Context.ConnectionId).SendAsync("ListarHorario", Horarios.ListaHorario);
+            await Clients.Client(Context.ConnectionId).SendAsync("ListarUsuario", Clientes.ListaCliente);
             //await Clients.All.SendAsync("AddUser", cliente); /* Mostraremos al nuevo usuario */
         }
 

@@ -1,0 +1,32 @@
+﻿<div class="card mr-4" style="max-width: 300px;">
+    <header class="card-header">
+        <p class="card-header-title my-0">
+            @MessageUser.Nombre
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+        </a>
+    </header>
+    <div class="card-content">
+        <div class="content">
+            <p>HOlaaaaaaaaasssssss</p>
+            <p>HOlaaaaaaaaasssssss</p>
+            <p>HOlaaaaaaaaasssssss</p>
+            <p>HOlaaaaaaaaasssssss</p>
+            <p>HOlaaaaaaaaasssssss</p>
+            <p>HOlaaaaaaaaasssssss</p>
+            <p>HOlaaaaaaaaasssssss</p>
+        </div>
+    </div>
+    <footer class="card-footer is-justify-content-center is-align-content-center p-2">
+        <p class="control has-icons-left my-0">
+            <input class="input is-link" type="text" placeholder="Search" @bind-value="MessageUser.Mesanje">
+            <span class="icon is-left">
+                <i class="fas fa-user" aria-hidden="true"></i>
+            </span>
+        </p>
+        <button class="button is-info is-light" @onclick="EnviarMensaje">Info</button>
+    </footer>
+</div>

@@ -9,6 +9,7 @@ namespace RegistroPrueba.Client.Shared
     public partial class Modal
     {
         [Parameter] public RenderFragment Formulario { get; set; }
+        [Parameter] public string Title { get; set; }
 
 
         protected bool EstadoModal = false;
