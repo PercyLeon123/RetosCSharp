@@ -21,7 +21,8 @@ namespace RegistroPrueba.Shared
 
         public void AddMessage(MessageUser messageUser) 
         {
-            ListaMensajeUsuarios.FirstOrDefault(x => x.Id == messageUser.Id).Mesanjes.Add(messageUser.Mesanje);
+            Message message = new() { Emisor = messageUser.Emisor, Mensaje = messageUser.Mensaje };
+            ListaMensajeUsuarios.FirstOrDefault(x => x.Id == messageUser.Id).Mesanjes.Add(message);
         }
     }
 }

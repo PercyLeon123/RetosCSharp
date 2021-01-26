@@ -51,6 +51,7 @@ namespace RegistroPrueba.Client.Pages
 
             HubConection.On<MessageUser>("MensajePrivado", (messageUser) =>
             {
+                messageUser.Emisor = false; /* Receptor */
                 ListaMensajeUsuarios.ValidaUser(messageUser);
                 ListaMensajeUsuarios.AddMessage(messageUser);
                 StateHasChanged();
@@ -59,14 +60,10 @@ namespace RegistroPrueba.Client.Pages
             HubConection.On<Cliente>("AddUser", (cliente) => 
             {
                 if (UserCliente.Id != cliente.Id)
-                {
                     ListaCliente.Add(cliente);
-                    StateHasChanged();
-                }
                 else 
-                {
                     UserCliente = cliente;
-                }
+                StateHasChanged();
             });
         }
 
@@ -88,12 +85,16 @@ namespace RegistroPrueba.Client.Pages
         protected void ComenzarChat(MessageUser messageUser) 
         {
             ListaMensajeUsuarios.ValidaUser(messageUser);
+            CModalListUsers.EventoModal();
             StateHasChanged();
         }
 
         protected async Task MensajePrivado(MessageUser messageUser) 
         {
-            messageUser.Nombre = UserCliente.Nombre; /* Artificio */
+            messageUser.Nombre = UserCliente.Nombre; /* Artificio, le asignamos Nombre de la session */
+            messageUser.Emisor = true; /* Emisor */
+
+            ListaMensajeUsuarios.AddMessage(messageUser);
             await HubConection.SendAsync("MensajePrivado", messageUser);
         }
     }

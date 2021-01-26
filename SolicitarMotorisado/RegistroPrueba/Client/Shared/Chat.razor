@@ -13,14 +13,15 @@
         <div class="content">
             <ListaGenerica ListObject="UserMessages.Mesanjes">
                 <Registro Context="Mensaje">
-                    <div>@Mensaje</div>
+                    <div class="@((Mensaje.Emisor)?"has-text-right":"has-text-left")">@Mensaje.Mensaje</div>
                 </Registro>
             </ListaGenerica>
         </div>
     </div>
     <footer class="card-footer is-justify-content-center is-align-content-center p-2">
         <p class="control has-icons-left my-0">
-            <input class="input is-link" type="text" placeholder="Search" @bind-value="MessageUser.Mesanje">
+            <input class="input is-link" type="text" @ref="InputMessage" @bind-value="MessageUser.Mensaje" 
+                   @bind-value:event="oninput" @onkeypress="@((KeyboardEventArgs e) => RedactarMensaje(e))">
             <span class="icon is-left">
                 <i class="fas fa-user" aria-hidden="true"></i>
             </span>

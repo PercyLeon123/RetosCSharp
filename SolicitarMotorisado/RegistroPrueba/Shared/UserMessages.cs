@@ -8,7 +8,7 @@ namespace RegistroPrueba.Shared
 {
     public class UserMessages : Persona
     {
-        public List<string> Mesanjes { get; set; }
+        public List<Message> Mesanjes { get; set; }
         public bool Visto { get; set; }
         public bool Activo { get; set; }
 
