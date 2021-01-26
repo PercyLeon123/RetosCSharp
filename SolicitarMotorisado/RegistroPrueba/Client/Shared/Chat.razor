@@ -1,7 +1,7 @@
 ﻿<div class="card mr-4" style="max-width: 300px;">
     <header class="card-header">
         <p class="card-header-title my-0">
-            @MessageUser.Nombre
+            @UserMessages.Nombre
         </p>
         <a href="#" class="card-header-icon" aria-label="more options">
             <span class="icon">
@@ -11,13 +11,11 @@
     </header>
     <div class="card-content">
         <div class="content">
-            <p>HOlaaaaaaaaasssssss</p>
-            <p>HOlaaaaaaaaasssssss</p>
-            <p>HOlaaaaaaaaasssssss</p>
-            <p>HOlaaaaaaaaasssssss</p>
-            <p>HOlaaaaaaaaasssssss</p>
-            <p>HOlaaaaaaaaasssssss</p>
-            <p>HOlaaaaaaaaasssssss</p>
+            <ListaGenerica ListObject="UserMessages.Mesanjes">
+                <Registro Context="Mensaje">
+                    <div>@Mensaje</div>
+                </Registro>
+            </ListaGenerica>
         </div>
     </div>
     <footer class="card-footer is-justify-content-center is-align-content-center p-2">

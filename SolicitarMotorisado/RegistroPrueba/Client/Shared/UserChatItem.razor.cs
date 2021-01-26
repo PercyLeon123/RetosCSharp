@@ -6,14 +6,14 @@ namespace RegistroPrueba.Client.Shared
     public partial class UserChatItem
     {
         [Parameter] public Cliente User { get; set; } = new();
-        [Parameter] public EventCallback<UserMessages> EnviarMensaje { get; set; }
+        [Parameter] public EventCallback<MessageUser> EnviarMensaje { get; set; }
 
-        protected UserMessages UserMessages = new();
+        protected MessageUser MessageUser = new();
 
         protected override void OnInitialized()
         {
-            UserMessages.Id = User.Id;
-            UserMessages.Nombre = User.Nombre;
+            MessageUser.Id = User.Id;
+            MessageUser.Nombre = User.Nombre;
 
             base.OnInitialized();
         }
@@ -23,7 +23,7 @@ namespace RegistroPrueba.Client.Shared
         public void EnviarMensajeUsuario() 
         {
             //UserMessages.Mesanjes.Add();
-            EnviarMensaje.InvokeAsync(UserMessages);
+            EnviarMensaje.InvokeAsync(MessageUser);
         }
     }
 }

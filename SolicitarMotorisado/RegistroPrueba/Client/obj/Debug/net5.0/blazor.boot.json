@@ -203,13 +203,13 @@
       "mscorlib.dll": "sha256-FWPx51huC\/WJLkKCgoTEa5pzm8+4Aucxg0YuOiuOwkQ=",
       "netstandard.dll": "sha256-2ba2qAAtNUX9Qh5PFXhTMtcD\/Nra\/wyG197\/wrnxElI=",
       "System.Private.CoreLib.dll": "sha256-4wsl1v32v74UB0CTQ6+AdUTdM+9C1VraomgeCjb4Wug=",
-      "RegistroPrueba.Shared.dll": "sha256-FY\/QHtibetht2QIG3g\/4R\/wF3uWN3Gn43dJ7g2TqR\/4=",
-      "RegistroPrueba.Client.dll": "sha256-lmatDBaZRxL5KSqSjeO4PWAU8wRNoucsgeW\/OzUUBNU="
+      "RegistroPrueba.Shared.dll": "sha256-bexhU+YL2TawyYe\/E5T++X8OaMJ8sBXKRuqAjXe\/jC8=",
+      "RegistroPrueba.Client.dll": "sha256-tAy2ZTGMzAUl3XHvXtRFl9OmZBGLlLkYWJtqbC\/Sat8="
     },
     "lazyAssembly": null,
     "pdb": {
-      "RegistroPrueba.Shared.pdb": "sha256-9HU9AQ3OnII6e17WwpHmVf\/SarnAO7ZGEQyiAyGzBcE=",
-      "RegistroPrueba.Client.pdb": "sha256-6NYtrUGETjZBogtvYXCpVfMm8ACFboEGNLh\/TnjO7Nk="
+      "RegistroPrueba.Shared.pdb": "sha256-YGp+\/37QWYxMAohngUXZxMy0S57W8mJxzJSgvjCPaKA=",
+      "RegistroPrueba.Client.pdb": "sha256-6Sk06n8eLut\/cNViGrj3B2XKJ8W\/Fn+ziht4PlGZd08="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-nXByiCO4+RYyh+A88TSSZDwAJMF7M7Up\/h6dfAA19C8=",

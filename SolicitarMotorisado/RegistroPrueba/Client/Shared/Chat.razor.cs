@@ -16,7 +16,7 @@ namespace RegistroPrueba.Client.Shared
         protected override void OnInitialized()
         {
             MessageUser.Id = UserMessages.Id;
-            MessageUser.Nombre = UserMessages.Nombre;
+          
 
             base.OnInitialized();
         }

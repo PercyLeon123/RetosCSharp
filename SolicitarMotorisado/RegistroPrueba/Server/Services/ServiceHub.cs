@@ -14,7 +14,7 @@ namespace RegistroPrueba.Server.Services
         public override async Task OnConnectedAsync() 
         {
             /* Context.ConnectionId es el Id de coneccion del que realizo la peticion */
-            await Clients.Client(Context.ConnectionId).SendAsync("IniciarSesion", true);
+            await Clients.Client(Context.ConnectionId).SendAsync("IniciarSesion", Context.ConnectionId);
             await base.OnConnectedAsync();
         }
 
@@ -24,8 +24,16 @@ namespace RegistroPrueba.Server.Services
             Clientes.ListaCliente.Add(cliente); /* Agregamos al nuevo usuario a la lista global de usuarios */
 
             await Clients.Client(Context.ConnectionId).SendAsync("ListarHorario", Horarios.ListaHorario);
-            await Clients.Client(Context.ConnectionId).SendAsync("ListarUsuario", Clientes.ListaCliente);
-            //await Clients.All.SendAsync("AddUser", cliente); /* Mostraremos al nuevo usuario */
+            await Clients.Client(Context.ConnectionId).SendAsync("ListarUsuario", Clientes.ListaCliente.Where(x=> x.Id != Context.ConnectionId).ToList());
+            await Clients.All.SendAsync("AddUser", cliente); /* Mostraremos al nuevo usuario */
+        }
+
+        public async Task MensajePrivado(MessageUser messageUser) 
+        {
+            var id = messageUser.Id;
+            messageUser.Id = Context.ConnectionId;
+
+            await Clients.Client(id).SendAsync("MensajePrivado", messageUser);
         }
 
     }

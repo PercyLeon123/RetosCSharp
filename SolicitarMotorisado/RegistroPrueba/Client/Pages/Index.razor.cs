@@ -19,8 +19,10 @@ namespace RegistroPrueba.Client.Pages
 
         protected List<Cliente> ListaCliente = new();
         protected List<Horario> ListaHorario = new();
-        protected List<UserMessages> ListaMensajeUsuarios = new();
+        protected ListUsersMessages ListaMensajeUsuarios = new();
         protected Cliente Cliente = new();
+
+        protected Cliente UserCliente = new();
 
         protected override void OnInitialized()
         {
@@ -30,6 +32,11 @@ namespace RegistroPrueba.Client.Pages
                 .Build();
 
             /* Metodo invocable por el servidor */
+            HubConection.On<string>("IniciarSesion", (id) =>
+            {
+                UserCliente.Id = id; /* Por ver */
+            });
+
             HubConection.On<List<Cliente>>("ListarUsuario", (listaCliente) =>
             {
                 ListaCliente = listaCliente;
@@ -44,7 +51,22 @@ namespace RegistroPrueba.Client.Pages
 
             HubConection.On<MessageUser>("MensajePrivado", (messageUser) =>
             {
-                ListaMensajeUsuarios.FirstOrDefault(x => x.Id == messageUser.Id).Mesanjes.Add(messageUser.Mesanje);
+                ListaMensajeUsuarios.ValidaUser(messageUser);
+                ListaMensajeUsuarios.AddMessage(messageUser);
+                StateHasChanged();
+            });
+
+            HubConection.On<Cliente>("AddUser", (cliente) => 
+            {
+                if (UserCliente.Id != cliente.Id)
+                {
+                    ListaCliente.Add(cliente);
+                    StateHasChanged();
+                }
+                else 
+                {
+                    UserCliente = cliente;
+                }
             });
         }
 
@@ -63,14 +85,15 @@ namespace RegistroPrueba.Client.Pages
             CModalLogin.EventoModal();
         }
 
-        protected void ComenzarChat(UserMessages userMessage) 
+        protected void ComenzarChat(MessageUser messageUser) 
         {
-            ListaMensajeUsuarios.Add(userMessage);
+            ListaMensajeUsuarios.ValidaUser(messageUser);
             StateHasChanged();
         }
 
         protected async Task MensajePrivado(MessageUser messageUser) 
         {
+            messageUser.Nombre = UserCliente.Nombre; /* Artificio */
             await HubConection.SendAsync("MensajePrivado", messageUser);
         }
     }
