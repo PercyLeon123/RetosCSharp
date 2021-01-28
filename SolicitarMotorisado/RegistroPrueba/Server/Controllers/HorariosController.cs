@@ -27,7 +27,7 @@ namespace RegistroPrueba.Server.Controllers
 
             if (Horarios.ListaHorario.Find(x => x.Id == id).Disponible == true)
             {
-                Horarios.ListaHorario.Find(x => x.Id == id).Disponible = true;
+                //Horarios.ListaHorario.Find(x => x.Id == id).Disponible = true;
                 Horarios.ListaHorario.Find(x => x.Id == id).Cliente = cliente;
                 control.Codigo = 200;
                 control.Descripcion = "Su horario se registro exitosamente";
@@ -48,7 +48,7 @@ namespace RegistroPrueba.Server.Controllers
 
             if (Horarios.ListaHorario.Find(x => x.Id == id).Disponible == false)
             {
-                Horarios.ListaHorario.Find(x => x.Id == id).Disponible = false;
+                //Horarios.ListaHorario.Find(x => x.Id == id).Disponible = false;
                 Horarios.ListaHorario.Find(x => x.Id == id).Cliente = new();
 
                 control.Codigo = 200;

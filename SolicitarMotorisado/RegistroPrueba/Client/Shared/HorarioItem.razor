@@ -1,4 +1,4 @@
-﻿<div class="column is-4-desktop is-6">
+﻿<div class="column is-3-widescreen is-4-desktop is-6-tablet ">
     <div class="card">
         <div class="card-image">
             <figure class="image is-4by3 mx-0">
@@ -26,7 +26,13 @@
                 <time datetime="2016-1-1">@Horario.FechaHorarioInicio - @Horario.FechaHorarioFin</time>
             </div>
             <div class="content pt-0">
-                <button class="button is-info is-hovered" disabled="@(!Horario.Disponible)">Hover</button>
+                <div class="buttons are-small">
+                    <button class="button is-info is-success" disabled="@(!Horario.Disponible)" @onclick="EscogerHorario">Realizar Recerva</button>
+                    @if (AnularRecerva)
+                    {
+                        <button class="button is-info is-danger" @onclick="CancelarHorario">Anular Recerva</button>
+                    }
+                </div>
             </div>
         </div>
     </div>

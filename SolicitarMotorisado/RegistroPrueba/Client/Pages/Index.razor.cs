@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+/* https://docs.microsoft.com/en-us/aspnet/core/signalr/dotnet-client?view=aspnetcore-2.2&tabs=visual-studio */
+
 namespace RegistroPrueba.Client.Pages
 {
     public partial class Index
@@ -28,8 +30,8 @@ namespace RegistroPrueba.Client.Pages
         {
             /* HubConnectionBuilder es un constructor para configurar instancias de HubConnection  */
             HubConection = new HubConnectionBuilder()
-                .WithUrl(NavigationManager.ToAbsoluteUri("/serviceHub"))
-                .Build();
+                .WithUrl(NavigationManager.ToAbsoluteUri("/serviceHub")) /* La URL que utilizará HttpConnection, Convierte un URI relativo en uno absoluto (resolviéndolo en relación con el URI absoluto actual).*/
+                .Build(); /* Crea una nueva instancia de HubConnection */
 
             /* Metodo invocable por el servidor */
             HubConection.On<string>("IniciarSesion", (id) =>
@@ -65,6 +67,19 @@ namespace RegistroPrueba.Client.Pages
                     UserCliente = cliente;
                 StateHasChanged();
             });
+
+            HubConection.On<int, Cliente>("EscogerHorario", (id, cliente) =>
+            {
+                ListaHorario.FirstOrDefault(x => x.Id == id).Cliente = cliente;
+                Console.WriteLine(id);
+                StateHasChanged();
+            });
+
+            HubConection.On<int>("CancelarHorario", (id) =>
+            {
+                ListaHorario.FirstOrDefault(x => x.Id == id).Cliente = new();
+                StateHasChanged();
+            });
         }
 
         public bool IsConnected => HubConection.State == HubConnectionState.Connected;
@@ -96,6 +111,16 @@ namespace RegistroPrueba.Client.Pages
 
             ListaMensajeUsuarios.AddMessage(messageUser);
             await HubConection.SendAsync("MensajePrivado", messageUser);
+        }
+
+        public async Task EscogerHorario(int id) 
+        {
+            await HubConection.SendAsync("EscogerHorario", id, UserCliente);
+        }
+
+        public async Task CancelarHorario(int id) 
+        {
+            await HubConection.SendAsync("CancelarHorario", id);
         }
     }
 }

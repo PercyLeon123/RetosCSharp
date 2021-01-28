@@ -9,11 +9,15 @@
             </span>
         </a>
     </header>
-    <div class="card-content">
+    <div class="card-content" style="height: 300px; width: 100%; overflow-y: auto;">
         <div class="content">
             <ListaGenerica ListObject="UserMessages.Mesanjes">
                 <Registro Context="Mensaje">
-                    <div class="@((Mensaje.Emisor)?"has-text-right":"has-text-left")">@Mensaje.Mensaje</div>
+                        <div class="@((Mensaje.Emisor)?"has-text-right messageEmisor bg-emisor":"has-text-left messageReceptor bg-receptor") p-2 mt-2 has-text-weight-bold has-text-white" >
+                            <div style="word-wrap: break-word;">
+                                @Mensaje.Mensaje
+                            </div>
+                        </div>
                 </Registro>
             </ListaGenerica>
         </div>

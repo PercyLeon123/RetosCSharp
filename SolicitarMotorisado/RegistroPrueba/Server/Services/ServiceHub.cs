@@ -36,5 +36,16 @@ namespace RegistroPrueba.Server.Services
             await Clients.Client(id).SendAsync("MensajePrivado", messageUser);
         }
 
+        public async Task EscogerHorario(int id, Cliente cliente) 
+        {
+            Horarios.ListaHorario.FirstOrDefault(x => x.Id == id).Cliente = cliente;
+            await Clients.All.SendAsync("EscogerHorario", id, cliente);
+        }
+
+        public async Task CancelarHorario(int id)
+        {
+            Horarios.ListaHorario.FirstOrDefault(x => x.Id == id).Cliente = new();
+            await Clients.All.SendAsync("CancelarHorario", id);
+        }
     }
 }
