@@ -12,6 +12,9 @@ namespace RegistroPrueba.Client.Shared
     {
         [Parameter] public UserMessages UserMessages { get; set; }
         [Parameter] public EventCallback<MessageUser> EnviarMensajePrivado { get; set; }
+        [Parameter] public EventCallback<UserMessages> MinimizarMessagesUser { get; set; }
+        [Parameter] public EventCallback<UserMessages> CloseMessagesUser { get; set; }
+
 
         MessageUser MessageUser = new();
         ElementReference InputMessage;
@@ -21,6 +24,15 @@ namespace RegistroPrueba.Client.Shared
             MessageUser.Id = UserMessages.Id;
             
             base.OnInitialized();
+        }
+
+        protected void Minimizar()
+        {
+            MinimizarMessagesUser.InvokeAsync(UserMessages);
+        }
+        protected void Cerrar()
+        {
+            CloseMessagesUser.InvokeAsync(UserMessages);
         }
 
         protected override async Task OnAfterRenderAsync(bool firstRender) 

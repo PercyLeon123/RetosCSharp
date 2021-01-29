@@ -27,10 +27,11 @@
             </div>
             <div class="content pt-0">
                 <div class="buttons are-small">
-                    <button class="button is-info is-success" disabled="@(!Horario.Disponible)" @onclick="EscogerHorario">Realizar Recerva</button>
+                    <button class="button is-success" disabled="@(!Horario.Disponible)" @onclick="EscogerHorario">Realizar Recerva</button>
+
                     @if (AnularRecerva)
                     {
-                        <button class="button is-info is-danger" @onclick="CancelarHorario">Anular Recerva</button>
+                        <button class="button is-danger" @onclick="CancelarHorario">Anular Recerva</button>
                     }
                 </div>
             </div>

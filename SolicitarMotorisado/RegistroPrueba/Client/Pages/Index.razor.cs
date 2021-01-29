@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.SignalR.Client;
 using RegistroPrueba.Client.Shared;
 using RegistroPrueba.Shared;
@@ -20,11 +21,14 @@ namespace RegistroPrueba.Client.Pages
         protected Modal CModalListUsers;
 
         protected List<Cliente> ListaCliente = new();
+        protected List<Cliente> ListaClienteH = new();
         protected List<Horario> ListaHorario = new();
         protected ListUsersMessages ListaMensajeUsuarios = new();
+        protected ListUsersMessages ListaMensajeUsuariosMin = new();
         protected Cliente Cliente = new();
 
         protected Cliente UserCliente = new();
+        protected string UsuarioFind;
 
         protected override void OnInitialized()
         {
@@ -42,6 +46,7 @@ namespace RegistroPrueba.Client.Pages
             HubConection.On<List<Cliente>>("ListarUsuario", (listaCliente) =>
             {
                 ListaCliente = listaCliente;
+                ListaClienteH = listaCliente; /* Historico */
                 StateHasChanged();
             });
 
@@ -54,8 +59,17 @@ namespace RegistroPrueba.Client.Pages
             HubConection.On<MessageUser>("MensajePrivado", (messageUser) =>
             {
                 messageUser.Emisor = false; /* Receptor */
-                ListaMensajeUsuarios.ValidaUser(messageUser);
-                ListaMensajeUsuarios.AddMessage(messageUser);
+                if (ListaMensajeUsuarios.ListaMensajeUsuarios.Count() < 2)
+                {
+                    ListaMensajeUsuarios.ValidaUser(messageUser);
+                    ListaMensajeUsuarios.AddMessage(messageUser);
+                }
+                else 
+                {
+                    ListaMensajeUsuariosMin.ValidaUser(messageUser);
+                    ListaMensajeUsuariosMin.AddMessage(messageUser);
+                }
+                
                 StateHasChanged();
             });
 
@@ -71,7 +85,6 @@ namespace RegistroPrueba.Client.Pages
             HubConection.On<int, Cliente>("EscogerHorario", (id, cliente) =>
             {
                 ListaHorario.FirstOrDefault(x => x.Id == id).Cliente = cliente;
-                Console.WriteLine(id);
                 StateHasChanged();
             });
 
@@ -97,11 +110,67 @@ namespace RegistroPrueba.Client.Pages
             CModalLogin.EventoModal();
         }
 
-        protected void ComenzarChat(MessageUser messageUser) 
+        protected void ComenzarChat(MessageUser messageUser)
         {
-            ListaMensajeUsuarios.ValidaUser(messageUser);
+            if (ListaMensajeUsuarios.IsNotExists(messageUser.Id)) 
+            {
+                if (ListaMensajeUsuarios.ListaMensajeUsuarios.Count() < 2)
+                {
+                    ListaMensajeUsuarios.ValidaUser(messageUser);
+                }
+                else
+                {
+                    /* si no hay es true */
+                    if (ListaMensajeUsuariosMin.IsNotExists(messageUser.Id))
+                    {
+                        var objetUserMessage = ListaMensajeUsuarios.ListaMensajeUsuarios.First();
+
+                        ListaMensajeUsuariosMin.ValidaConversacion(objetUserMessage);
+                        ListaMensajeUsuarios.ListaMensajeUsuarios.Remove(objetUserMessage);
+
+                        ListaMensajeUsuarios.ValidaUser(messageUser);
+                    }
+                    else
+                    {
+                        var obj = ListaMensajeUsuarios.ListaMensajeUsuarios.First();
+
+                        ListaMensajeUsuariosMin.ValidaConversacion(obj);
+                        ListaMensajeUsuarios.ListaMensajeUsuarios.Remove(obj);
+
+                        var objetUserMessage = ListaMensajeUsuariosMin.ListaMensajeUsuarios.FirstOrDefault(x => x.Id == messageUser.Id);
+                        ListaMensajeUsuarios.ValidaConversacion(objetUserMessage);
+                        ListaMensajeUsuariosMin.ListaMensajeUsuarios.Remove(objetUserMessage);
+                    }
+                }
+            }
+
             CModalListUsers.EventoModal();
             StateHasChanged();
+        }
+
+        protected void MaximizarMessagesUser(UserMessages userMessages) 
+        {
+            Console.WriteLine("-Inicio");
+            if (ListaMensajeUsuarios.ListaMensajeUsuarios.Count() > 1) 
+            {
+                var obj = ListaMensajeUsuarios.ListaMensajeUsuarios.First();
+                ListaMensajeUsuariosMin.ValidaConversacion(obj);
+                ListaMensajeUsuarios.ListaMensajeUsuarios.Remove(obj);
+            }
+            ListaMensajeUsuarios.ValidaConversacion(userMessages);
+            ListaMensajeUsuariosMin.ListaMensajeUsuarios.Remove(userMessages);
+            Console.WriteLine("-Fin");
+        }
+
+        protected void MinimizarMessagesUser(UserMessages userMessages)
+        {
+            ListaMensajeUsuarios.ListaMensajeUsuarios.Remove(userMessages);
+            ListaMensajeUsuariosMin.ValidaConversacion(userMessages);
+        }
+
+        protected void CloseMessagesUser(UserMessages userMessages)
+        {
+            ListaMensajeUsuarios.ListaMensajeUsuarios.Remove(userMessages);
         }
 
         protected async Task MensajePrivado(MessageUser messageUser) 
@@ -121,6 +190,14 @@ namespace RegistroPrueba.Client.Pages
         public async Task CancelarHorario(int id) 
         {
             await HubConection.SendAsync("CancelarHorario", id);
+        }
+
+        protected void BuscarUsuario(KeyboardEventArgs e) 
+        {
+            if (e.Key == "Enter") 
+            {
+                ListaCliente = ListaClienteH.Where(x => x.Nombre.ToLower().Contains(UsuarioFind.ToLower())).ToList();
+            }
         }
     }
 }
